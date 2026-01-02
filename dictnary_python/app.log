@@ -1,0 +1,16 @@
+2026-01-03 00:01:12,345 INFO  app.main        User login successful | user_id=1023 | ip=192.168.1.10
+2026-01-03 00:01:15,892 INFO  app.api         GET /api/v1/profile | status=200 | response_time=120ms
+2026-01-03 00:01:18,410 WARNING app.auth     Failed login attempt | user_id=1024 | ip=192.168.1.15
+2026-01-03 00:01:21,003 INFO  app.db          DB connection established
+2026-01-03 00:01:25,678 ERROR app.db          Database timeout | query=SELECT * FROM users | timeout=5s
+2026-01-03 00:01:30,234 INFO  app.api         POST /api/v1/order | status=201 | response_time=340ms
+2026-01-03 00:01:35,999 INFO  app.main        User logout | user_id=1023
+2026-01-03 00:02:01,120 INFO  app.scheduler  Scheduled job started | job=cleanup
+2026-01-03 00:02:02,876 INFO  app.scheduler  Scheduled job completed | job=cleanup | duration=1756ms
+2026-01-03 00:02:10,541 WARNING app.api      Slow response detected | endpoint=/api/v1/report | response_time=2100ms
+2026-01-03 00:02:15,333 ERROR app.api        Internal Server Error | endpoint=/api/v1/report | status=500
+2026-01-03 00:02:20,889 INFO  app.cache       Cache hit | key=user_1023
+2026-01-03 00:02:25,444 INFO  app.cache       Cache miss | key=user_1099
+2026-01-03 00:02:30,777 ERROR app.payment    Payment failed | order_id=55671 | reason=Insufficient funds
+2026-01-03 00:02:35,101 INFO  app.payment    Payment successful | order_id=55672 | amount=2499
+2026-01-03 00:02:40,654 CRITICAL app.main    Application crash | reason=OutOfMemory
